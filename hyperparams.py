@@ -7,3 +7,4 @@ use_mulaw = True
 batch_size = 1
 num_epochs = 100
 save_dir = './logdir'
+test_data = 'test.wav'

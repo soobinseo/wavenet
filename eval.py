@@ -21,7 +21,7 @@ def main():
 
     g = Graph()
 
-    mixture = librosa.load('./data/test.wav', sr=hp.sample_rate)[0]
+    mixture = librosa.load('./data/' + hp.test_data, sr=hp.sample_rate)[0]
     mixture_len = len(mixture) // hp.timestep
     print mixture_len
     mixture = np.expand_dims(mixture[:mixture_len * hp.timestep].reshape([-1,hp.timestep]),-1)
