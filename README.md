@@ -1,5 +1,7 @@
 # wavenet
 
+<img src="png/wavenet.png">
+
 ## Description
   * This is a Tensorflow implementaion of Audio source separation (mixture to vocal) using the Wavenet. Although the Wavenet model used the causal convolution (only previous sequence must be used for training) to generate(predict) next sequence, this task is for audio separation purposes, so the latter sequence may be used for training. I used original dilated 1-D convolution. Except this, the network structures are the same as the [paper](https://deepmind.com/blog/wavenet-generative-model-raw-audio/). See the file `hyperparams.py` for the detailed hyperparameters.
 
@@ -26,3 +28,6 @@ I used DSD100 dataset which consists of pairs of mixture audio files and vocal a
 
 ## Generate seperated vocal audio
   * Prepare a test data (the name of this data should be defined at hyperparams.py) and locate it in 'data' directory and run `eval.py`.
+
+## Notes
+  * I applied L1-loss instead of NLL-loss using the mu-law companding.
