@@ -23,7 +23,7 @@ I used DSD100 dataset which consists of pairs of mixture audio files and vocal a
 
 ## Training the network
   * STEP 1. Adjust hyper parameters in `hyperparams.py` if necessary.
-  * STEP 2. Download and extract DSD100 data as mentioned above at 'data' directory.
+  * STEP 2. Download and extract DSD100 data as mentioned above at 'data' directory, and run `data_utils.py`.
   * STEP 3. Run `train.py`. 
 
 ## Generate seperated vocal audio
